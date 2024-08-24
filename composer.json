@@ -1,0 +1,16 @@
+{
+    "name": "prinsfrank/validation-rules",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PrinsFrank\\ValidationRules\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PrinsFrank\\ValidationRules\\Tests\\": "tests/"
+        }
+    },
+    "require": {}
+}
