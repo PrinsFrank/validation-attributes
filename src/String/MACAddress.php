@@ -10,7 +10,7 @@ use PrinsFrank\ValidationRules\DateTime\StringRule;
 class MACAddress implements StringRule {
     #[Override]
     public function isValid(string $value): bool {
-        // TODO: Implement isValid() method.
+        return filter_var($value, FILTER_VALIDATE_MAC);
     }
 
     #[Override]

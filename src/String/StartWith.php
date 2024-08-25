@@ -8,9 +8,14 @@ use PrinsFrank\ValidationRules\DateTime\StringRule;
 
 #[Attribute]
 class StartWith implements StringRule {
+    public function __construct(
+        private readonly string $startWith,
+    ) {
+    }
+
     #[Override]
     public function isValid(string $value): bool {
-        // TODO: Implement isValid() method.
+        return str_starts_with($value, $this->startWith);
     }
 
     #[Override]
