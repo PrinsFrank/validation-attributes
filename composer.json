@@ -1,5 +1,6 @@
 {
     "name": "prinsfrank/validation-rules",
+    "description": "Validation rules as attributes",
     "type": "library",
     "license": "MIT",
     "autoload": {
