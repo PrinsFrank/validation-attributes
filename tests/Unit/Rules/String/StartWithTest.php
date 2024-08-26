@@ -13,7 +13,7 @@ class StartWithTest extends TestCase {
     public function testIsValid(): void {
         $startWith = new StartWith('a');
         static::assertFalse($startWith->isValid('b'));
-        static::assertFalse($startWith->isValid('ba'));
+        static::assertFalse($startWith->isValid('bba'));
         static::assertTrue($startWith->isValid('a'));
         static::assertTrue($startWith->isValid('ab'));
     }
