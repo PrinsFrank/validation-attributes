@@ -2,7 +2,14 @@
 
 namespace PrinsFrank\ValidationRules;
 
+/** @method isValid() with param of concrete type defined in extending interfaces */
 interface Rule {
-    /** @return array<string, string|bool|int|float> */
+    /**
+     * @return array{
+     *     pattern?: string,
+     *     required?: bool,
+     *     type?: 'email'|'color'|'url'
+     * }
+     */
     public function getHTMLAttributes(): array;
 }
