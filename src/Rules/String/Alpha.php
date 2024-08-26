@@ -6,7 +6,7 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class Alpha implements StringRule {
+readonly class Alpha implements StringRule {
     #[Override]
     public function isValid(string $value): bool {
         return preg_match('/^[\p{L}\p{M}]*$/', $value) === 1;

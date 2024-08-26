@@ -6,7 +6,7 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class NotEmpty implements ArrayRule {
+readonly class NotEmpty implements ArrayRule {
     #[Override]
     public function isValid(array $value): bool {
         return $value !== [];

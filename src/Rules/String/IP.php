@@ -6,10 +6,10 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class IP implements StringRule {
+readonly class IP implements StringRule {
     public function __construct(
-        private readonly bool $allowPrivate,
-        private readonly bool $allowReserved,
+        private bool $allowPrivate,
+        private bool $allowReserved,
     ) {
     }
 

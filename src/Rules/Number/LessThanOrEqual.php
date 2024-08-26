@@ -6,9 +6,9 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class LessThanOrEqual implements NumberRule {
+readonly class LessThanOrEqual implements NumberRule {
     public function __construct(
-        private readonly float|int $lessThanOrEqual
+        private float|int $lessThanOrEqual
     ) {
     }
 

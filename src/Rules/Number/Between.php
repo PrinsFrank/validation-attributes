@@ -7,11 +7,11 @@ use Override;
 use PrinsFrank\ValidationRules\Exception\InvalidArgumentException;
 
 #[Attribute]
-class Between implements NumberRule {
+readonly class Between implements NumberRule {
     /** @throws InvalidArgumentException */
     public function __construct(
-        private readonly float|int $largerThanOrEqual,
-        private readonly float|int $lessThanOrEqual
+        private float|int $largerThanOrEqual,
+        private float|int $lessThanOrEqual
     ) {
         if ($this->largerThanOrEqual > $this->lessThanOrEqual) {
             throw new InvalidArgumentException('Lower bound is higher than upper bound');

@@ -6,7 +6,7 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class MACAddress implements StringRule {
+readonly class MACAddress implements StringRule {
     #[Override]
     public function isValid(string $value): bool {
         return filter_var($value, FILTER_VALIDATE_MAC) !== false;

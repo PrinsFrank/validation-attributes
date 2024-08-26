@@ -7,13 +7,13 @@ use Override;
 use PrinsFrank\ValidationRules\Exception\InvalidArgumentException;
 
 #[Attribute]
-class StartWith implements StringRule {
+readonly class StartWith implements StringRule {
     /**
      * @param non-empty-string $startWith
      * @throws InvalidArgumentException
      */
     public function __construct(
-        private readonly string $startWith,
+        private string $startWith,
     ) {
         if ($this->startWith === '') {
             throw new InvalidArgumentException('All strings start with an empty string');

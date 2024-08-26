@@ -7,15 +7,15 @@ use Override;
 use PrinsFrank\ValidationRules\Exception\InvalidArgumentException;
 
 #[Attribute]
-class Length implements StringRule {
+readonly class Length implements StringRule {
     /**
      * @param int<0, max> $largerThanOrEqual
      * @param int<0, max> $lessThanOrEqual
      * @throws InvalidArgumentException
      */
     public function __construct(
-        private readonly int $largerThanOrEqual,
-        private readonly int $lessThanOrEqual
+        private int $largerThanOrEqual,
+        private int $lessThanOrEqual
     ) {
         if ($this->largerThanOrEqual < 0 || $this->lessThanOrEqual < 0) {
             throw new InvalidArgumentException('Length of a string cannot be smaller than zero');

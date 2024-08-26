@@ -6,9 +6,9 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class Pattern implements StringRule {
+readonly class Pattern implements StringRule {
     public function __construct(
-        private readonly string $pattern
+        private string $pattern
     ) {
     }
 

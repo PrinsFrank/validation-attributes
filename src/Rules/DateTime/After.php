@@ -9,9 +9,9 @@ use DateTimeImmutable;
 use Override;
 
 #[Attribute]
-class After implements DateTimeRule {
+readonly class After implements DateTimeRule {
     public function __construct(
-        private readonly string $modifierString,
+        private string $modifierString,
     ) {
     }
 

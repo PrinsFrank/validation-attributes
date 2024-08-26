@@ -7,13 +7,13 @@ use Override;
 use PrinsFrank\ValidationRules\Exception\InvalidArgumentException;
 
 #[Attribute]
-class Contain implements StringRule {
+readonly class Contain implements StringRule {
     /**
      * @param non-empty-string $endWith
      * @throws InvalidArgumentException
      */
     public function __construct(
-        private readonly string $endWith,
+        private string $endWith,
     ) {
         if ($this->endWith === '') {
             throw new InvalidArgumentException('All strings contain an empty string');

@@ -6,7 +6,7 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class Required implements GenericRule {
+readonly class Required implements GenericRule {
     #[Override]
     public function isValid(mixed $value): bool {
         return $value !== null;

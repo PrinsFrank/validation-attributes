@@ -6,7 +6,7 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class NotBlank implements StringRule {
+readonly class NotBlank implements StringRule {
     #[Override]
     public function isValid(string $value): bool {
         return $value !== '';

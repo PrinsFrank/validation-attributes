@@ -7,15 +7,15 @@ use Override;
 use PrinsFrank\ValidationRules\Exception\InvalidArgumentException;
 
 #[Attribute]
-class NrOfItemsBetween implements ArrayRule {
+readonly class NrOfItemsBetween implements ArrayRule {
     /**
      * @param int<0, max> $largerThanOrEqual
      * @param int<0, max> $lessThanOrEqual
      * @throws InvalidArgumentException
      */
     public function __construct(
-        private readonly int $largerThanOrEqual,
-        private readonly int $lessThanOrEqual
+        private int $largerThanOrEqual,
+        private int $lessThanOrEqual
     ) {
         if ($this->largerThanOrEqual < 0 || $this->lessThanOrEqual < 0) {
             throw new InvalidArgumentException('Nr of items cannot be smaller than zero');

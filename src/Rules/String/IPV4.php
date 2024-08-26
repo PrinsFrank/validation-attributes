@@ -6,10 +6,10 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class IPV4 implements StringRule {
+readonly class IPV4 implements StringRule {
     public function __construct(
-        private readonly bool $allowPrivate = true,
-        private readonly bool $allowReserved = true,
+        private bool $allowPrivate = true,
+        private bool $allowReserved = true,
     ) {
     }
 

@@ -6,7 +6,7 @@ use Attribute;
 use Override;
 
 #[Attribute]
-class Email implements StringRule {
+readonly class Email implements StringRule {
     #[Override]
     public function isValid(string $value): bool {
         return filter_var($value, FILTER_VALIDATE_EMAIL) !== false;
