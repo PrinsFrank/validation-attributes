@@ -14,13 +14,13 @@
         }
     },
     "require": {
-        "php": "~8.3",
-        "phpstan/phpstan-strict-rules": "^1.6"
+        "php": "~8.3"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.11",
         "friendsofphp/php-cs-fixer": "^3.62",
-        "phpunit/phpunit": "^11.3"
+        "phpunit/phpunit": "^11.3",
+        "phpstan/phpstan-strict-rules": "^1.6"
     },
     "scripts": {
         "cs": "php-cs-fixer fix --allow-risky=yes --dry-run",
