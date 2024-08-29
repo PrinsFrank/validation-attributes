@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace PrinsFrank\ValidationAttributes\Tests\Unit\Rules\Generic;
+namespace PrinsFrank\ValidationAttributes\Tests\Unit\Attributes\Generic;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PrinsFrank\ValidationAttributes\Rules\Generic\Required;
+use PrinsFrank\ValidationAttributes\Attributes\Generic\Required;
 
 #[CoversClass(Required::class)]
 class RequiredTest extends TestCase {

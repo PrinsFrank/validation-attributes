@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace PrinsFrank\ValidationAttributes\Tests\Unit\Rules\Array;
+namespace PrinsFrank\ValidationAttributes\Tests\Unit\Attributes\Array;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PrinsFrank\ValidationAttributes\Rules\Array\NotEmpty;
+use PrinsFrank\ValidationAttributes\Attributes\Array\NotEmpty;
 
 #[CoversClass(NotEmpty::class)]
 class NotEmptyTest extends TestCase {

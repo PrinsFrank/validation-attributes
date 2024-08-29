@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace PrinsFrank\ValidationAttributes\Tests\Unit\Rules\String;
+namespace PrinsFrank\ValidationAttributes\Tests\Unit\Attributes\String;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PrinsFrank\ValidationAttributes\Rules\String\ASCII;
+use PrinsFrank\ValidationAttributes\Attributes\String\ASCII;
 
 #[CoversClass(ASCII::class)]
 class ASCIITest extends TestCase {

@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace PrinsFrank\ValidationAttributes\Tests\Unit\Rules\String;
+namespace PrinsFrank\ValidationAttributes\Tests\Unit\Attributes\String;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PrinsFrank\ValidationAttributes\Rules\String\AlphaNumeric;
+use PrinsFrank\ValidationAttributes\Attributes\String\AlphaNumeric;
 
 #[CoversClass(AlphaNumeric::class)]
 class AlphaNumericTest extends TestCase {
