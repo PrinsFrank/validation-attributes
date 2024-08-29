@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace PrinsFrank\ValidationRules\Tests\Unit\Rules\Number;
+namespace PrinsFrank\ValidationAttributes\Tests\Unit\Rules\Number;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PrinsFrank\ValidationRules\Rules\Number\LessThanOrEqual;
+use PrinsFrank\ValidationAttributes\Rules\Number\LessThanOrEqual;
 
 #[CoversClass(LessThanOrEqual::class)]
 class LessThanOrEqualTest extends TestCase {

@@ -2,5 +2,7 @@
 
 namespace PrinsFrank\ValidationAttributes\Exception;
 
-class InvalidArgumentException extends ValidationAttributeException {
+use Exception;
+
+abstract class ValidationAttributeException extends Exception {
 }

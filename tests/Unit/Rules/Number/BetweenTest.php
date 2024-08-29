@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace PrinsFrank\ValidationRules\Tests\Unit\Rules\Number;
+namespace PrinsFrank\ValidationAttributes\Tests\Unit\Rules\Number;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PrinsFrank\ValidationRules\Exception\InvalidArgumentException;
-use PrinsFrank\ValidationRules\Rules\Number\Between;
+use PrinsFrank\ValidationAttributes\Exception\InvalidArgumentException;
+use PrinsFrank\ValidationAttributes\Rules\Number\Between;
 
 #[CoversClass(Between::class)]
 class BetweenTest extends TestCase {

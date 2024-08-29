@@ -1,16 +1,16 @@
 {
-    "name": "prinsfrank/validation-rules",
-    "description": "Validation rules as attributes",
+    "name": "prinsfrank/validation-attributes",
+    "description": "Validation attributes",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "PrinsFrank\\ValidationRules\\": "src/"
+            "PrinsFrank\\ValidationAttributes\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PrinsFrank\\ValidationRules\\Tests\\": "tests/"
+            "PrinsFrank\\ValidationAttributes\\Tests\\": "tests/"
         }
     },
     "require": {

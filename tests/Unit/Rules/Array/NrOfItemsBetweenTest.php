@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace PrinsFrank\ValidationRules\Tests\Unit\Rules\Array;
+namespace PrinsFrank\ValidationAttributes\Tests\Unit\Rules\Array;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PrinsFrank\ValidationRules\Exception\InvalidArgumentException;
-use PrinsFrank\ValidationRules\Rules\Array\NrOfItemsBetween;
+use PrinsFrank\ValidationAttributes\Exception\InvalidArgumentException;
+use PrinsFrank\ValidationAttributes\Rules\Array\NrOfItemsBetween;
 
 #[CoversClass(NrOfItemsBetween::class)]
 class NrOfItemsBetweenTest extends TestCase {
