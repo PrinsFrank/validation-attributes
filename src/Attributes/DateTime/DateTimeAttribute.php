@@ -6,6 +6,7 @@ use DateTime;
 use DateTimeImmutable;
 use PrinsFrank\ValidationAttributes\Attribute;
 
+/** @extends Attribute<DateTime|DateTimeImmutable> */
 interface DateTimeAttribute extends Attribute {
-    public function isValid(DateTime|DateTimeImmutable $value): bool;
+    public function isValid(DateTime|DateTimeImmutable $value, object $context): bool;
 }

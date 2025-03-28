@@ -8,7 +8,7 @@ use Override;
 #[Attribute(Attribute::TARGET_PARAMETER | Attribute::TARGET_PROPERTY)]
 readonly class Alpha implements StringAttribute {
     #[Override]
-    public function isValid(string $value): bool {
+    public function isValid(string $value, object $context): bool {
         return preg_match('/^[\p{L}\p{M}]*$/', $value) === 1;
     }
 

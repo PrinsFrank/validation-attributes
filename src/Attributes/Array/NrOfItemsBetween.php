@@ -27,7 +27,7 @@ readonly class NrOfItemsBetween implements ArrayAttribute {
     }
 
     #[Override]
-    public function isValid(array $value): bool {
+    public function isValid(array $value, object $context): bool {
         $nrOfItems = count($value);
 
         return $nrOfItems >= $this->largerThanOrEqual

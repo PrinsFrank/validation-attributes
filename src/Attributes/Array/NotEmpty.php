@@ -8,7 +8,7 @@ use Override;
 #[Attribute(Attribute::TARGET_PARAMETER | Attribute::TARGET_PROPERTY)]
 readonly class NotEmpty implements ArrayAttribute {
     #[Override]
-    public function isValid(array $value): bool {
+    public function isValid(array $value, object $context): bool {
         return $value !== [];
     }
 

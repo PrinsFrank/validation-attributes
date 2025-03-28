@@ -21,7 +21,7 @@ readonly class StartWith implements StringAttribute {
     }
 
     #[Override]
-    public function isValid(string $value): bool {
+    public function isValid(string $value, object $context): bool {
         return str_starts_with($value, $this->startWith);
     }
 

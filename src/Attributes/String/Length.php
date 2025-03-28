@@ -27,7 +27,7 @@ readonly class Length implements StringAttribute {
     }
 
     #[Override]
-    public function isValid(string $value): bool {
+    public function isValid(string $value, object $context): bool {
         $nrOfCharacters = mb_strlen($value);
 
         return $nrOfCharacters >= $this->largerThanOrEqual

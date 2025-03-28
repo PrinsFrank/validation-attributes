@@ -11,12 +11,12 @@ class AlphaNumericTest extends TestCase {
     public function testIsValid(): void {
         $alpha = new AlphaNumeric();
 
-        static::assertFalse($alpha->isValid('-'));
-        static::assertFalse($alpha->isValid('&'));
-        static::assertTrue($alpha->isValid('42'));
-        static::assertFalse($alpha->isValid('{}'));
-        static::assertTrue($alpha->isValid('foo'));
-        static::assertTrue($alpha->isValid('FOO'));
-        static::assertTrue($alpha->isValid('FOO42'));
+        static::assertFalse($alpha->isValid('-', (object) []));
+        static::assertFalse($alpha->isValid('&', (object) []));
+        static::assertTrue($alpha->isValid('42', (object) []));
+        static::assertFalse($alpha->isValid('{}', (object) []));
+        static::assertTrue($alpha->isValid('foo', (object) []));
+        static::assertTrue($alpha->isValid('FOO', (object) []));
+        static::assertTrue($alpha->isValid('FOO42', (object) []));
     }
 }

@@ -11,11 +11,11 @@ class ASCIITest extends TestCase {
     public function testIsValid(): void {
         $ascii = new ASCII();
 
-        static::assertFalse($ascii->isValid('€'));
-        static::assertTrue($ascii->isValid('@'));
-        static::assertTrue($ascii->isValid(''));
-        static::assertTrue($ascii->isValid('a'));
-        static::assertTrue($ascii->isValid('A'));
-        static::assertTrue($ascii->isValid('1'));
+        static::assertFalse($ascii->isValid('€', (object) []));
+        static::assertTrue($ascii->isValid('@', (object) []));
+        static::assertTrue($ascii->isValid('', (object) []));
+        static::assertTrue($ascii->isValid('a', (object) []));
+        static::assertTrue($ascii->isValid('A', (object) []));
+        static::assertTrue($ascii->isValid('1', (object) []));
     }
 }

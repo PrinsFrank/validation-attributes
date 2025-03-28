@@ -8,7 +8,7 @@ use Override;
 #[Attribute(Attribute::TARGET_PARAMETER | Attribute::TARGET_PROPERTY)]
 readonly class Required implements GenericAttribute {
     #[Override]
-    public function isValid(mixed $value): bool {
+    public function isValid(mixed $value, object $context): bool {
         return $value !== null;
     }
 

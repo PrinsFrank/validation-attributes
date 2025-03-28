@@ -19,7 +19,7 @@ readonly class Between implements NumberAttribute {
     }
 
     #[Override]
-    public function isValid(int|float $value): bool {
+    public function isValid(int|float $value, object $context): bool {
         return $value >= $this->largerThanOrEqual
             && $value <= $this->lessThanOrEqual;
     }

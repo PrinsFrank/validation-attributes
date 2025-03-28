@@ -12,19 +12,19 @@ class NrOfItemsBetweenTest extends TestCase {
     /** @throws InvalidArgumentException */
     public function testIsValid(): void {
         $nrOfItems = new NrOfItemsBetween(0, 1);
-        static::assertTrue($nrOfItems->isValid([]));
-        static::assertTrue($nrOfItems->isValid([null]));
-        static::assertFalse($nrOfItems->isValid([null, null]));
+        static::assertTrue($nrOfItems->isValid([], (object) []));
+        static::assertTrue($nrOfItems->isValid([null], (object) []));
+        static::assertFalse($nrOfItems->isValid([null, null], (object) []));
 
         $nrOfItems = new NrOfItemsBetween(1, 1);
-        static::assertFalse($nrOfItems->isValid([]));
-        static::assertTrue($nrOfItems->isValid([null]));
-        static::assertFalse($nrOfItems->isValid([null, null]));
+        static::assertFalse($nrOfItems->isValid([], (object) []));
+        static::assertTrue($nrOfItems->isValid([null], (object) []));
+        static::assertFalse($nrOfItems->isValid([null, null], (object) []));
 
         $nrOfItems = new NrOfItemsBetween(1, 2);
-        static::assertFalse($nrOfItems->isValid([]));
-        static::assertTrue($nrOfItems->isValid([null]));
-        static::assertTrue($nrOfItems->isValid([null, null]));
+        static::assertFalse($nrOfItems->isValid([], (object) []));
+        static::assertTrue($nrOfItems->isValid([null], (object) []));
+        static::assertTrue($nrOfItems->isValid([null, null], (object) []));
     }
 
     /** @throws InvalidArgumentException */

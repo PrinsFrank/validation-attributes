@@ -15,7 +15,7 @@ readonly class BeforeOrEqual implements DateTimeAttribute {
     }
 
     #[Override]
-    public function isValid(DateTime|DateTimeImmutable $value): bool {
+    public function isValid(DateTime|DateTimeImmutable $value, object $context): bool {
         $diff = $this->beforeOrEqual->diff($value);
 
         return $diff->invert === 1
