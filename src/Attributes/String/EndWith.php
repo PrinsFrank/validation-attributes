@@ -21,7 +21,7 @@ readonly class EndWith implements StringAttribute {
     }
 
     #[Override]
-    public function isValid(string $value): bool {
+    public function isValid(string $value, object $context): bool {
         return str_ends_with($value, $this->endWith);
     }
 

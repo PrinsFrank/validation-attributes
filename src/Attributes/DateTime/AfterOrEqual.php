@@ -15,7 +15,7 @@ readonly class AfterOrEqual implements DateTimeAttribute {
     }
 
     #[Override]
-    public function isValid(DateTime|DateTimeImmutable $value): bool {
+    public function isValid(DateTime|DateTimeImmutable $value, object $context): bool {
         $diff = $this->afterOrEqual->diff($value);
         return $diff->invert === 0
             || ($diff->y === 0 && $diff->m === 0 && $diff->d === 0 && $diff->h === 0 && $diff->i === 0 && $diff->s === 0 && $diff->f === 0.0);

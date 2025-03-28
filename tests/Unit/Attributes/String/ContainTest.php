@@ -13,16 +13,16 @@ class ContainTest extends TestCase {
     public function testIsValid(): void {
         $contain = new Contain('a');
 
-        static::assertFalse($contain->isValid(''));
-        static::assertFalse($contain->isValid('b'));
-        static::assertTrue($contain->isValid('a'));
-        static::assertTrue($contain->isValid('bab'));
+        static::assertFalse($contain->isValid('', (object) []));
+        static::assertFalse($contain->isValid('b', (object) []));
+        static::assertTrue($contain->isValid('a', (object) []));
+        static::assertTrue($contain->isValid('bab', (object) []));
 
         $contain = new Contain('abc');
-        static::assertFalse($contain->isValid('cba'));
-        static::assertFalse($contain->isValid('bca'));
-        static::assertTrue($contain->isValid('abc'));
-        static::assertTrue($contain->isValid('cabca'));
+        static::assertFalse($contain->isValid('cba', (object) []));
+        static::assertFalse($contain->isValid('bca', (object) []));
+        static::assertTrue($contain->isValid('abc', (object) []));
+        static::assertTrue($contain->isValid('cabca', (object) []));
     }
 
     /** @throws InvalidArgumentException */

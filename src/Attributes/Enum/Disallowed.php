@@ -15,7 +15,7 @@ readonly class Disallowed implements EnumAttribute {
     }
 
     #[Override]
-    public function isValid(BackedEnum $value): bool {
+    public function isValid(BackedEnum $value, object $context): bool {
         return !in_array($value, $this->disallowedValues, true);
     }
 

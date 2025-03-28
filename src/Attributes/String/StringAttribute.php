@@ -4,6 +4,7 @@ namespace PrinsFrank\ValidationAttributes\Attributes\String;
 
 use PrinsFrank\ValidationAttributes\Attribute;
 
+/** @extends Attribute<string> */
 interface StringAttribute extends Attribute {
-    public function isValid(string $value): bool;
+    public function isValid(string $value, object $context): bool;
 }

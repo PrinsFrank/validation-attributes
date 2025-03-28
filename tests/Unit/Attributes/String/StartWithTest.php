@@ -12,10 +12,10 @@ class StartWithTest extends TestCase {
     /** @throws InvalidArgumentException */
     public function testIsValid(): void {
         $startWith = new StartWith('a');
-        static::assertFalse($startWith->isValid('b'));
-        static::assertFalse($startWith->isValid('bba'));
-        static::assertTrue($startWith->isValid('a'));
-        static::assertTrue($startWith->isValid('ab'));
+        static::assertFalse($startWith->isValid('b', (object) []));
+        static::assertFalse($startWith->isValid('bba', (object) []));
+        static::assertTrue($startWith->isValid('a', (object) []));
+        static::assertTrue($startWith->isValid('ab', (object) []));
     }
 
     /** @throws InvalidArgumentException */

@@ -11,11 +11,11 @@ class NotEmptyTest extends TestCase {
     public function testIsValid(): void {
         $notEmpty = new NotEmpty();
 
-        static::assertFalse($notEmpty->isValid([]));
-        static::assertTrue($notEmpty->isValid([null]));
-        static::assertTrue($notEmpty->isValid(['']));
-        static::assertTrue($notEmpty->isValid([[]]));
-        static::assertTrue($notEmpty->isValid([[null]]));
-        static::assertTrue($notEmpty->isValid([[], []]));
+        static::assertFalse($notEmpty->isValid([], (object) []));
+        static::assertTrue($notEmpty->isValid([null], (object) []));
+        static::assertTrue($notEmpty->isValid([''], (object) []));
+        static::assertTrue($notEmpty->isValid([[]], (object) []));
+        static::assertTrue($notEmpty->isValid([[null]], (object) []));
+        static::assertTrue($notEmpty->isValid([[], []], (object) []));
     }
 }

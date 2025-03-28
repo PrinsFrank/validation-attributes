@@ -12,10 +12,10 @@ class EndWithTest extends TestCase {
     /** @throws InvalidArgumentException */
     public function testIsValid(): void {
         $endWith = new EndWith('a');
-        static::assertFalse($endWith->isValid('b'));
-        static::assertFalse($endWith->isValid('bbb'));
-        static::assertTrue($endWith->isValid('a'));
-        static::assertTrue($endWith->isValid('bba'));
+        static::assertFalse($endWith->isValid('b', (object) []));
+        static::assertFalse($endWith->isValid('bbb', (object) []));
+        static::assertTrue($endWith->isValid('a', (object) []));
+        static::assertTrue($endWith->isValid('bba', (object) []));
     }
 
     /** @throws InvalidArgumentException */

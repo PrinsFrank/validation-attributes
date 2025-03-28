@@ -14,7 +14,7 @@ readonly class IPV4 implements StringAttribute {
     }
 
     #[Override]
-    public function isValid(string $value): bool {
+    public function isValid(string $value, object $context): bool {
         $options = FILTER_FLAG_IPV4;
         if ($this->allowPrivate === false) {
             $options |= FILTER_FLAG_NO_PRIV_RANGE;

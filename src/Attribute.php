@@ -2,7 +2,7 @@
 
 namespace PrinsFrank\ValidationAttributes;
 
-/** @method isValid() with param of concrete type defined in extending interfaces */
+/** @template T of mixed */
 interface Attribute {
     /**
      * @return array{

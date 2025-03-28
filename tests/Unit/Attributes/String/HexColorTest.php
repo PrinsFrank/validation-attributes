@@ -11,17 +11,17 @@ class HexColorTest extends TestCase {
     public function testIsValid(): void {
         $hexColor = new HexColor();
 
-        static::assertFalse($hexColor->isValid('0'));
-        static::assertFalse($hexColor->isValid('00'));
-        static::assertTrue($hexColor->isValid('000'));
-        static::assertTrue($hexColor->isValid('FFF'));
-        static::assertTrue($hexColor->isValid('0000'));
-        static::assertTrue($hexColor->isValid('FFFF'));
-        static::assertTrue($hexColor->isValid('000000'));
-        static::assertTrue($hexColor->isValid('FFFFFF'));
-        static::assertTrue($hexColor->isValid('00000000'));
-        static::assertTrue($hexColor->isValid('FFFFFFFF'));
-        static::assertFalse($hexColor->isValid('000000000'));
-        static::assertFalse($hexColor->isValid('FFFFFFFFF'));
+        static::assertFalse($hexColor->isValid('0', (object) []));
+        static::assertFalse($hexColor->isValid('00', (object) []));
+        static::assertTrue($hexColor->isValid('000', (object) []));
+        static::assertTrue($hexColor->isValid('FFF', (object) []));
+        static::assertTrue($hexColor->isValid('0000', (object) []));
+        static::assertTrue($hexColor->isValid('FFFF', (object) []));
+        static::assertTrue($hexColor->isValid('000000', (object) []));
+        static::assertTrue($hexColor->isValid('FFFFFF', (object) []));
+        static::assertTrue($hexColor->isValid('00000000', (object) []));
+        static::assertTrue($hexColor->isValid('FFFFFFFF', (object) []));
+        static::assertFalse($hexColor->isValid('000000000', (object) []));
+        static::assertFalse($hexColor->isValid('FFFFFFFFF', (object) []));
     }
 }

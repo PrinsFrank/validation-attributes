@@ -11,13 +11,13 @@ class RequiredTest extends TestCase {
     public function testIsValid(): void {
         $required = new Required();
 
-        static::assertFalse($required->isValid(null));
-        static::assertTrue($required->isValid(0));
-        static::assertTrue($required->isValid(0.0));
-        static::assertTrue($required->isValid(1));
-        static::assertTrue($required->isValid(''));
-        static::assertTrue($required->isValid('NULL'));
-        static::assertTrue($required->isValid([]));
-        static::assertTrue($required->isValid((object) []));
+        static::assertFalse($required->isValid(null, (object) []));
+        static::assertTrue($required->isValid(0, (object) []));
+        static::assertTrue($required->isValid(0.0, (object) []));
+        static::assertTrue($required->isValid(1, (object) []));
+        static::assertTrue($required->isValid('', (object) []));
+        static::assertTrue($required->isValid('NULL', (object) []));
+        static::assertTrue($required->isValid([], (object) []));
+        static::assertTrue($required->isValid((object) [], (object) []));
     }
 }

@@ -14,7 +14,7 @@ readonly class IP implements StringAttribute {
     }
 
     #[Override]
-    public function isValid(string $value): bool {
+    public function isValid(string $value, object $context): bool {
         $options = 0;
         if ($this->allowPrivate === false) {
             $options |= FILTER_FLAG_NO_PRIV_RANGE;

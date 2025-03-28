@@ -15,7 +15,7 @@ readonly class After implements DateTimeAttribute {
     }
 
     #[Override]
-    public function isValid(DateTime|DateTimeImmutable $value): bool {
+    public function isValid(DateTime|DateTimeImmutable $value, object $context): bool {
         return $this->after->diff($value)->invert === 0;
     }
 

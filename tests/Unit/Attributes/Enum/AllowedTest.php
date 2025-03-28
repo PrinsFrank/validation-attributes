@@ -10,17 +10,17 @@ use PrinsFrank\ValidationAttributes\Attributes\Enum\Allowed;
 class AllowedTest extends TestCase {
     public function testIsValid(): void {
         $attribute = new Allowed([]);
-        static::assertFalse($attribute->isValid(StringBackedEnum::A));
-        static::assertFalse($attribute->isValid(StringBackedEnum::B));
-        static::assertFalse($attribute->isValid(IntBackedEnum::One));
-        static::assertFalse($attribute->isValid(IntBackedEnum::Two));
+        static::assertFalse($attribute->isValid(StringBackedEnum::A, (object) []));
+        static::assertFalse($attribute->isValid(StringBackedEnum::B, (object) []));
+        static::assertFalse($attribute->isValid(IntBackedEnum::One, (object) []));
+        static::assertFalse($attribute->isValid(IntBackedEnum::Two, (object) []));
 
         $attribute = new Allowed([StringBackedEnum::A]);
-        static::assertTrue($attribute->isValid(StringBackedEnum::A));
-        static::assertFalse($attribute->isValid(StringBackedEnum::B));
+        static::assertTrue($attribute->isValid(StringBackedEnum::A, (object) []));
+        static::assertFalse($attribute->isValid(StringBackedEnum::B, (object) []));
 
         $attribute = new Allowed([IntBackedEnum::One]);
-        static::assertTrue($attribute->isValid(IntBackedEnum::One));
-        static::assertFalse($attribute->isValid(IntBackedEnum::Two));
+        static::assertTrue($attribute->isValid(IntBackedEnum::One, (object) []));
+        static::assertFalse($attribute->isValid(IntBackedEnum::Two, (object) []));
     }
 }

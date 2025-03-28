@@ -4,7 +4,8 @@ namespace PrinsFrank\ValidationAttributes\Attributes\Array;
 
 use PrinsFrank\ValidationAttributes\Attribute;
 
+/** @extends Attribute<array<mixed>> */
 interface ArrayAttribute extends Attribute {
     /** @param array<mixed> $value */
-    public function isValid(array $value): bool;
+    public function isValid(array $value, object $context): bool;
 }

@@ -10,12 +10,12 @@ use PrinsFrank\ValidationAttributes\Attributes\String\Email;
 class EmailTest extends TestCase {
     public function testIsValid(): void {
         $email = new Email();
-        static::assertFalse($email->isValid(''));
-        static::assertFalse($email->isValid('foo'));
-        static::assertFalse($email->isValid('foo@'));
-        static::assertFalse($email->isValid('foo@bar'));
-        static::assertTrue($email->isValid('foo@bar.com'));
-        static::assertTrue($email->isValid('foo.bar@bar.com'));
-        static::assertTrue($email->isValid('foo+1@bar.com'));
+        static::assertFalse($email->isValid('', (object) []));
+        static::assertFalse($email->isValid('foo', (object) []));
+        static::assertFalse($email->isValid('foo@', (object) []));
+        static::assertFalse($email->isValid('foo@bar', (object) []));
+        static::assertTrue($email->isValid('foo@bar.com', (object) []));
+        static::assertTrue($email->isValid('foo.bar@bar.com', (object) []));
+        static::assertTrue($email->isValid('foo+1@bar.com', (object) []));
     }
 }

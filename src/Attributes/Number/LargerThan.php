@@ -13,7 +13,7 @@ readonly class LargerThan implements NumberAttribute {
     }
 
     #[Override]
-    public function isValid(int|float $value): bool {
+    public function isValid(int|float $value, object $context): bool {
         return $value > $this->largerThan;
     }
 

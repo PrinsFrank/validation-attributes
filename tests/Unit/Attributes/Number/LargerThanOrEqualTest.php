@@ -11,14 +11,14 @@ class LargerThanOrEqualTest extends TestCase {
     public function testIsValid(): void {
         $between = new LargerThanOrEqual(-5);
 
-        static::assertFalse($between->isValid(-INF));
-        static::assertFalse($between->isValid(-PHP_INT_MAX));
-        static::assertFalse($between->isValid(-6));
-        static::assertTrue($between->isValid(-5));
-        static::assertTrue($between->isValid(0));
-        static::assertTrue($between->isValid(5));
-        static::assertTrue($between->isValid(6));
-        static::assertTrue($between->isValid(PHP_INT_MAX));
-        static::assertTrue($between->isValid(INF));
+        static::assertFalse($between->isValid(-INF, (object) []));
+        static::assertFalse($between->isValid(-PHP_INT_MAX, (object) []));
+        static::assertFalse($between->isValid(-6, (object) []));
+        static::assertTrue($between->isValid(-5, (object) []));
+        static::assertTrue($between->isValid(0, (object) []));
+        static::assertTrue($between->isValid(5, (object) []));
+        static::assertTrue($between->isValid(6, (object) []));
+        static::assertTrue($between->isValid(PHP_INT_MAX, (object) []));
+        static::assertTrue($between->isValid(INF, (object) []));
     }
 }
